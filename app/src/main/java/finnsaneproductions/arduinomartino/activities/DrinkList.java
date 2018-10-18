@@ -47,7 +47,7 @@ public class DrinkList extends Activity {
         ConnectionFactory.INSTANCE.addSource(new BluetoothSppProvider());
 
         // Mock connection provider is good for testing.
-        ConnectionFactory.INSTANCE.addSource(new MockConnectionProvider());
+       // ConnectionFactory.INSTANCE.addSource(new MockConnectionProvider());
 
         // Populate list with drink names.
         if (drinks != null) {
