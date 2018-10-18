@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbManager;
+import android.os.Build;
 
 
 import java.io.BufferedReader;
@@ -86,7 +87,9 @@ public class UsbSerialProvider implements ConnectionProvider {
             // Register USB broadcast event receiver.
             context.registerReceiver(receiver, new IntentFilter(ACTION_USB_PERMISSION));
             // Ask for permission to the device.
-            manager.requestPermission(device, PendingIntent.getBroadcast(context, 0, new Intent(ACTION_USB_PERMISSION), 0));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR1) {
+                manager.requestPermission(device, PendingIntent.getBroadcast(context, 0, new Intent(ACTION_USB_PERMISSION), 0));
+            }
         }
 
         @Override

@@ -17,6 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import finnsaneproductions.arduinomartino.BluetoothSppProvider;
 import finnsaneproductions.arduinomartino.JsonDrinkProvider;
+import finnsaneproductions.arduinomartino.MockConnectionProvider;
 import finnsaneproductions.arduinomartino.R;
 import finnsaneproductions.arduinomartino.UsbSerialProvider;
 import finnsaneproductions.arduinomartino.factories.ConnectionFactory;
@@ -46,7 +47,7 @@ public class DrinkList extends Activity {
         ConnectionFactory.INSTANCE.addSource(new BluetoothSppProvider());
 
         // Mock connection provider is good for testing.
-        //ConnectionFactory.INSTANCE.addSource(new MockConnectionProvider());
+        ConnectionFactory.INSTANCE.addSource(new MockConnectionProvider());
 
         // Populate list with drink names.
         if (drinks != null) {

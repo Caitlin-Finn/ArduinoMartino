@@ -1,17 +1,12 @@
 package finnsaneproductions.arduinomartino.interfaces;
 
-import android.os.Handler;
 
 import java.io.IOException;
-import java.util.concurrent.atomic.AtomicLong;
 
-/**
- * Created by Tony on 2/24/14.
- */
 public interface DeviceConnection {
-    public void requestPermission(Runnable granted);
-    public void open() throws IOException;
-    public Double getMeasure() throws IOException;
-    public void close();
+     void requestPermission(Runnable granted);
+     void open() throws IOException;
+     Double getMeasure() throws IOException;
+     void close();
 
 }

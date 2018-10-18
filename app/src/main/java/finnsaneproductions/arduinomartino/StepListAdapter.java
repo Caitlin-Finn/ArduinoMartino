@@ -105,13 +105,13 @@ public class StepListAdapter extends BaseAdapter {
         public RelativeLayout measureViews;
 
         public ViewHolder(View view) {
-            instructions = (TextView) view.findViewById(R.id.step_list_instruction);
-            measureLabel = (TextView) view.findViewById(R.id.step_list_measure_label);
-            measureValue = (TextView) view.findViewById(R.id.step_list_measure_value);
-            measureProgress = (ProgressBar) view.findViewById(R.id.step_list_measure_progress);
-            next = (Button) view.findViewById(R.id.step_list_next);
-            activeViews = (RelativeLayout) view.findViewById(R.id.step_list_active_views);
-            measureViews = (RelativeLayout) view.findViewById(R.id.step_list_measure_views);
+            instructions = view.findViewById(R.id.step_list_instruction);
+            measureLabel = view.findViewById(R.id.step_list_measure_label);
+            measureValue = view.findViewById(R.id.step_list_measure_value);
+            measureProgress = view.findViewById(R.id.step_list_measure_progress);
+            next = view.findViewById(R.id.step_list_next);
+            activeViews = view.findViewById(R.id.step_list_active_views);
+            measureViews = view.findViewById(R.id.step_list_measure_views);
         }
     }
 }
